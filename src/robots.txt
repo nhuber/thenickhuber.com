@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thenickhuber.com/sitemap.xml

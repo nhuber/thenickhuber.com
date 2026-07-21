@@ -1,0 +1,15 @@
+{
+  "name": "thenickhuber-com",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Portable Markdown archive and static site for thenickhuber.com",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "audit": "node scripts/audit.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

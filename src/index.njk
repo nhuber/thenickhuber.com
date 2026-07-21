@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Nick Huber
+description: AI product leader, self-taught programmer, data scientist, and small-check investor.
+permalink: /index.html
+---
+<section class="intro wrap">
+  <p class="eyebrow">Hello, I’m Nick.</p>
+  <h1>I build AI products, write software, study data, and make small-check investments.</h1>
+  <p class="lede">This is my personal notebook: durable ideas, practical lessons, and the occasional attempt to understand myself.</p>
+</section>
+
+<section class="writing wrap" aria-labelledby="writing-heading">
+  <h2 id="writing-heading">Writing</h2>
+  <ol class="post-list">
+  {% for post in collections.posts | reverse %}
+    <li>
+      <a href="{{ post.url }}">
+        <span>{{ post.data.title }}</span>
+        <time datetime="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
+      </a>
+    </li>
+  {% endfor %}
+  </ol>
+</section>

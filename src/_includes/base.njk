@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}{% if title != site.name %} · {{ site.name }}{% endif %}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:type" content="{% if date %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/site.css">
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a class="wordmark" href="/">Nick Huber</a>
+      <nav aria-label="Primary">
+        <a href="/">Writing</a>
+        <a href="{{ site.social.x }}">X</a>
+        <a href="{{ site.social.github }}">GitHub</a>
+      </nav>
+    </header>
+    <main>{{ content | safe }}</main>
+    <footer class="site-footer wrap">
+      <p>© {{ "2026-01-01" | year }} Nick Huber. Written here, stored as Markdown.</p>
+      <a href="/feed.xml">RSS</a>
+    </footer>
+  </body>
+</html>

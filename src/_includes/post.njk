@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+<article class="post wrap">
+  <header class="post-header">
+    <p class="eyebrow"><time datetime="{{ date }}">{{ date | readableDate }}</time></p>
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="prose">{{ content | safe }}</div>
+</article>
