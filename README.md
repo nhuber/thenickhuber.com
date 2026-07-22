@@ -39,5 +39,6 @@ If you prefer, ask Codex to create or publish a post from a draft. The Markdown 
 - The untouched source capture is preserved separately in the migration backup archive.
 - `legacyCanonical` records the canonical URL emitted by Svbtle.
 - The replacement emits HTTPS canonical URLs on the same paths.
-- HTTP and `www` normalization will be configured during the approved domain cutover.
-- Do not change DNS until a preview has been reviewed and the domain renewed.
+- The production site is hosted on Cloudflare Pages at `https://thenickhuber.com`.
+- Cloudflare upgrades HTTP to HTTPS and permanently redirects `www.thenickhuber.com` to the root domain while preserving paths and query strings.
+- DNS is managed by Cloudflare; GoDaddy remains the domain registrar.
