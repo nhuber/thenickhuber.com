@@ -5,7 +5,7 @@ legacyCanonical: "https://thenickhuber.com/vibe-coding-my-favorite-defunct-game"
 slug: "vibe-coding-my-favorite-defunct-game"
 ---
 
-<p class="post-deck">Most of my “users” were bots.</p>
+<h2 class="post-deck">Most of my “users” were bots.</h2>
 
 For the past 18 months, I have had a private benchmark for coding agents: can they rebuild my favorite defunct game? (An autobattler called [Storybook Brawl](https://en.wikipedia.org/wiki/Storybook_Brawl), that imploded after the FTX bankruptcy, which occurred a few months after acquiring the game’s studio).
 
