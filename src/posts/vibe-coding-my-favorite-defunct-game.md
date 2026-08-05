@@ -89,7 +89,7 @@ Above all, I was able to faithfully and accurately resurrect the core game mecha
 
 It was especially fun to build suggestions from players in a few hours while they were still playing, like a Mortal Kombat-style “killing blow” cutscene that wasn’t even in the original game. Also, the in-game AI opponent (with no specific steering or customization – more on this later as well) was significantly better than what shipped with the original game.
 
-<figure class="post-figure post-figure-wide">
+<figure class="post-figure post-figure-wide post-figure-lightened">
   <img src="/assets/fablebrawl-killing-blow.gif" alt="Animated FableBrawl killing-blow cutscene where Merlin defeats Grandmother with arcane lightning">
   <figcaption>A player suggestion, built and shipped while people were still playing.</figcaption>
 </figure>
