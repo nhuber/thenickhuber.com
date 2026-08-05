@@ -82,9 +82,7 @@ I made an admin dashboard to grant free subscriptions and monitor live usage. I 
 Above all, I was able to faithfully and accurately resurrect the core game mechanics of my favorite defunct game with all of its crunchy, tactical decisions in an appropriate, high-fantasy setting – and be able to play on a live multiplayer server with other people!
 
 <div class="player-reactions" aria-label="Player reactions to FableBrawl">
-  <img src="/assets/fablebrawl-player-pix.png" alt="A Discord player says they had a lot of fun playing FableBrawl and reporting bugs">
-  <img src="/assets/fablebrawl-player-wait4godot.png" alt="A Discord player says they will check out FableBrawl">
-  <img src="/assets/fablebrawl-player-house.png" alt="A Discord player praises the quick turnaround and says maybe AI deserves a wink">
+  <img src="/assets/fablebrawl-player-reactions-collage.png" alt="Three Discord player reactions: Pix praises FableBrawl and bug reporting, wait4godot says they will check it out, and House praises the quick turnaround">
 </div>
 
 It was especially fun to build suggestions from players in a few hours while they were still playing, like a Mortal Kombat-style “killing blow” cutscene that wasn’t even in the original game. Also, the in-game AI opponent (with no specific steering or customization – more on this later as well) was significantly better than what shipped with the original game.
