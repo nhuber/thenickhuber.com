@@ -126,9 +126,7 @@ Speaking of: **voice** – have you joined the voice revolution yet? While I sti
 The most “factory-like” or at least “production-line” aspect of my humble software restaurant was my bug reporting and resolution workflow. I knowingly shipped the game in a barely working state, because even as such I expected some people would want to play it, it was still fun, and we could collaboratively iron out the game engine together – rather than relying on me laboriously testing different interactions. Over the course of ~3 days, we received ~100 bug reports – at first in Discord messages but eventually via an in-app reporting flow that also serialized the game state in the report. After about a day of responding to emails myself, I realized about 90% of the time, I was just copying and pasting the report into the coding agents verbatim and so built a Claude Code routine where every hour it would read the bug reports from [hello@fablebrawl.com](mailto:hello@fablebrawl.com) and automatically resolve them as long as they were low- to medium-risk and didn’t have any ambiguity.<sup class="footnote-ref"><a id="fnref-8" href="#fn-8" aria-label="Read footnote 8">8</a></sup> The community seemed to really like how quickly their issues were addressed (average resolution time of ~3h), and even received an agent-written email explaining the resolution as a sort of checksum to ensure we fixed it correctly.
 
 <figure class="post-figure post-figure-wide">
-  <div class="post-media-crop post-media-crop-inbox">
-    <img src="/assets/fablebrawl-bug-inbox.png" alt="Gmail inbox showing the top unread FableBrawl bug reports">
-  </div>
+  <img src="/assets/fablebrawl-bug-inbox.png" alt="Gmail inbox showing the current FableBrawl bug-report queue">
   <figcaption>The top of the bug-report queue.</figcaption>
 </figure>
 
@@ -145,6 +143,10 @@ The most “factory-like” or at least “production-line” aspect of my humbl
 </div>
 
 The one frustration experience I had was using the coding agents to improve the in-game AI opponent’s decision-making. While the “out-of-the-box” (e.g. no customization) performance was significantly better than the original game, it was nowhere near the skill of a top player. An adult human who learned the basic game mechanics could probably beat the in-game AIs within 30-45 minutes; the in-game AI has no chance of ever getting close to beating a top player that has put hundreds-thousands of hours into the game. I tried a few things: I talked to the coding agents about what I observed the in-game AIs doing poorly and this was able to improve average placement by ~0.4 points (for context, the game is 8-player, so 4.5 is an average placement). I tried ~10 times to steer the coding agents to make some kind of RL environment where the in-game AIs could play against each other and tune their weights; this failed horribly even after many scripts and hundreds of hours of wall time. Fundamentally, I think the game’s state space is too large to be “vibe-trained” on.<sup class="footnote-ref"><a id="fnref-9" href="#fn-9" aria-label="Read footnote 9">9</a></sup> I even tried meaningfully reducing the search space by trying to improve the in-game AI for a single one of the game’s 44 unique heroes, but even that didn’t work, and I didn’t care enough to more precisely define the learning problem. There’s a chance too that OpenAI/Anthropic are intentionally making their public-facing model APIs worse at writing machine learning code due to competitive concerns.<sup class="footnote-ref"><a id="fnref-10" href="#fn-10" aria-label="Read footnote 10">10</a></sup>
+
+<figure class="post-figure post-figure-wide">
+  <img src="/assets/fablebrawl-ai-training.png" alt="FableBrawl AI training dashboard showing the stopped experiment and held-out evaluation results">
+</figure>
 
 A few final thoughts for other aspiring software restauranteurs:
 
@@ -166,7 +168,7 @@ The most interesting part of the community response was the guttural rejection o
 
 <figure class="post-figure post-figure-compact">
   <img src="/assets/fablebrawl-ai-art-reaction.png" alt="A Discord user asks who did the art for FableBrawl">
-  <figcaption>The most revealing question in the community response.</figcaption>
+  <figcaption>The very first question in my game’s Discord #general.</figcaption>
 </figure>
 
 <h3 id="most-of-my-users-were-bots">Most of my users were bots <a class="section-permalink" href="#most-of-my-users-were-bots" aria-label="Link to Most of my users were bots">#</a></h3>
