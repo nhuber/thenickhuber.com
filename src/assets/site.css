@@ -43,6 +43,18 @@ nav a { text-decoration: none; color: var(--muted); }
 .post-figure img { display: block; width: 100%; border: 1px solid var(--line); border-radius: .4rem; background: #111; }
 .post-figure-lightened img { filter: brightness(1.35); }
 .post-figure figcaption { margin-top: .7rem; color: var(--muted); font: .78rem/1.5 ui-sans-serif, system-ui, sans-serif; text-align: center; }
+.prose img[data-lightbox-ready="true"] { cursor: zoom-in; }
+.prose img[data-lightbox-ready="true"]:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 54%, transparent); outline-offset: 4px; }
+body.image-lightbox-open { overflow: hidden; }
+.image-lightbox[hidden] { display: none; }
+.image-lightbox { position: fixed; inset: 0; z-index: 1000; display: grid; width: 100vw; height: 100vh; height: 100dvh; padding: calc(3.8rem + env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); background: #000; overscroll-behavior: contain; touch-action: none; }
+.image-lightbox-stage { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 0; }
+.image-lightbox-media { display: grid; min-width: 0; min-height: 0; place-items: center; }
+.image-lightbox-image { display: block; max-width: 100%; max-height: 100%; border: 0; border-radius: 0; background: transparent; object-fit: contain; cursor: zoom-out; }
+.image-lightbox-caption { max-width: min(52rem, calc(100vw - 2rem)); margin: .8rem auto 0; color: rgba(255, 255, 255, .82); font: 400 .72rem/1.45 ui-sans-serif, system-ui, sans-serif; text-align: center; }
+.image-lightbox-close { position: absolute; top: max(.65rem, env(safe-area-inset-top)); right: max(.65rem, env(safe-area-inset-right)); z-index: 1; display: grid; width: 2.75rem; height: 2.75rem; padding: 0; place-items: center; border: 1px solid rgba(255, 255, 255, .42); border-radius: 50%; color: #fff; background: rgba(0, 0, 0, .6); font: 300 2rem/1 ui-sans-serif, system-ui, sans-serif; cursor: pointer; touch-action: manipulation; }
+.image-lightbox-close:hover { border-color: #fff; background: rgba(255, 255, 255, .14); }
+.image-lightbox-close:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .post-figure-phone { width: min(100%, 23rem); margin-inline: auto; }
 .post-figure-wide { width: min(68rem, calc(100vw - 2.5rem)); margin-left: 50%; transform: translateX(-50%); }
 .post-footnote { color: var(--muted); font: .76rem/1.5 ui-sans-serif, system-ui, sans-serif; }

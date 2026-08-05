@@ -246,3 +246,108 @@ Probably the funniest moment was when I realized that all of the analytics dashb
     });
   })();
 </script>
+
+<script>
+  (() => {
+    const images = [...document.querySelectorAll(".prose img")];
+    if (!images.length) return;
+
+    const lightbox = document.createElement("div");
+    lightbox.id = "image-lightbox";
+    lightbox.className = "image-lightbox";
+    lightbox.hidden = true;
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Full-screen image viewer");
+
+    const closeButton = document.createElement("button");
+    closeButton.className = "image-lightbox-close";
+    closeButton.type = "button";
+    closeButton.setAttribute("aria-label", "Close full-screen image");
+    closeButton.textContent = "×";
+
+    const stage = document.createElement("div");
+    stage.className = "image-lightbox-stage";
+    const media = document.createElement("div");
+    media.className = "image-lightbox-media";
+    const fullImage = document.createElement("img");
+    fullImage.className = "image-lightbox-image";
+    const caption = document.createElement("p");
+    caption.className = "image-lightbox-caption";
+
+    media.append(fullImage);
+    stage.append(media, caption);
+    lightbox.append(closeButton, stage);
+    document.body.append(lightbox);
+
+    let activeImage = null;
+    let priorPaddingRight = "";
+    let backgroundStates = [];
+
+    const imageCaption = (image) => {
+      const figureCaption = image.closest("figure")?.querySelector("figcaption")?.textContent.trim();
+      return figureCaption || image.getAttribute("alt")?.trim() || "";
+    };
+
+    const closeLightbox = () => {
+      if (lightbox.hidden) return;
+      lightbox.hidden = true;
+      document.body.classList.remove("image-lightbox-open");
+      document.body.style.paddingRight = priorPaddingRight;
+      backgroundStates.forEach(({ element, wasInert }) => { element.inert = wasInert; });
+      backgroundStates = [];
+      fullImage.removeAttribute("src");
+      fullImage.style.removeProperty("filter");
+      activeImage?.focus({ preventScroll: true });
+      activeImage = null;
+    };
+
+    const openLightbox = (image) => {
+      activeImage = image;
+      const text = imageCaption(image);
+      fullImage.src = image.currentSrc || image.src;
+      fullImage.alt = image.alt || text;
+      fullImage.style.filter = image.closest(".post-figure-lightened") ? "brightness(1.35)" : "";
+      caption.textContent = text;
+      caption.hidden = !text;
+      priorPaddingRight = document.body.style.paddingRight;
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+      backgroundStates = [...document.body.children]
+        .filter((element) => element !== lightbox)
+        .map((element) => ({ element, wasInert: element.inert }));
+      backgroundStates.forEach(({ element }) => { element.inert = true; });
+      document.body.classList.add("image-lightbox-open");
+      lightbox.hidden = false;
+      closeButton.focus({ preventScroll: true });
+    };
+
+    images.forEach((image) => {
+      const text = imageCaption(image);
+      image.dataset.lightboxReady = "true";
+      image.tabIndex = 0;
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-haspopup", "dialog");
+      image.setAttribute("aria-controls", lightbox.id);
+      image.setAttribute("aria-label", `View full screen: ${text || image.alt || "image"}`);
+      image.addEventListener("click", (event) => {
+        event.preventDefault();
+        openLightbox(image);
+      });
+      image.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openLightbox(image);
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    fullImage.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target === stage || event.target === media) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  })();
+</script>
