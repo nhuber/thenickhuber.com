@@ -188,7 +188,7 @@ Update: as I was pushing publish on this post, a former top player streamed the 
   <p class="post-comments-kicker">Comments</p>
   <h2 id="post-comments-title">Join the conversation</h2>
   <p>Questions, counterarguments, private benchmarks of your own—I’d love to hear them. Reply on X.</p>
-  <a class="post-comments-action" href="https://x.com/intent/post?text=Thoughts%20on%20Nick%27s%20FableBrawl%20software%20kitchen%3A&amp;url=https%3A%2F%2Fthenickhuber.com%2Fvibe-coding-my-favorite-defunct-game%2F" target="_blank" rel="noopener">Comment on X <span aria-hidden="true">↗</span></a>
+  <a class="post-comments-action" href="https://x.com/nhuber/status/2085044858281201921" target="_blank" rel="noopener">Comment on X <span aria-hidden="true">↗</span></a>
 </section>
 
 <script>
