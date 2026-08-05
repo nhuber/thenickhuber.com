@@ -15,7 +15,7 @@ Earlier attempts were impressive until they weren’t. I could get a basic templ
 
 This time, I can say that this benchmark is basically saturated. This is my journey.
 
-## FableBrawl: an overview
+<h2 id="fablebrawl-an-overview">FableBrawl: an overview <a class="section-permalink" href="#fablebrawl-an-overview" aria-label="Link to FableBrawl: an overview">#</a></h2>
 
 In roughly seven days of full-time work, I built FableBrawl as a [website](https://fablebrawl.com/) and an iOS app. It has Google and Apple sign-in, subscriptions through Stripe, a Vite-based game client, Postgres on Railway, deployment through GitHub Actions and Vercel, activation emails through Resend, analytics logs in Cloudflare R2, and a staging environment where I could test changes before shipping them. I had heard of most of these tools before but had never built on top of them; I can’t in full honesty say I still understand what all of them do, except to say that “[it works](https://hooverpresidentialfoundation.org/speeches/engineering-as-a-profession/).” I felt especially seen when Stripe’s onboarding flow had specific hooks for building with coding agents.
 
@@ -92,7 +92,7 @@ It was especially fun to build suggestions from players in a few hours while the
   <figcaption>A player suggestion, built and shipped while people were still playing.</figcaption>
 </figure>
 
-## A peek inside my software kitchen
+<h2 id="a-peek-inside-my-software-kitchen">A peek inside my software kitchen <a class="section-permalink" href="#a-peek-inside-my-software-kitchen" aria-label="Link to A peek inside my software kitchen">#</a></h2>
 
 There is a heated debate on Twitter right now over if “software factories” – the idea of agents autonomously, continuously building high-quality software – are [real](https://x.com/dexhorthy/status/2080697380379427275) or [not](https://x.com/GeoffreyHuntley/status/2082525589416923314). I’m not an expert, but what I will say is that my experience working with these agents felt more like running a slightly chaotic, but happy family restaurant more than operating a factory.
 
@@ -154,7 +154,7 @@ A few final thoughts for other aspiring software restauranteurs:
   - I think the best current way to do this is to have [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) make a design system for you that you approve, but I can’t verify this because I only did this after the fact when I basically had gotten everything looking how I wanted it to.
   - The killer features here are being able to drop a comment *associated with a location* on the screen, just like you’d rev a mockup with a designer, and even draw on the screen to communicate sizings and locations visually
 
-## Community response – so, did anyone care?
+<h2 id="community-response-so-did-anyone-care">Community response – so, did anyone care? <a class="section-permalink" href="#community-response-so-did-anyone-care" aria-label="Link to Community response – so, did anyone care?">#</a></h2>
 
 At its peak, Storybook Brawl had [~250,000 copies installed](https://steamdb.info/app/1367020/charts/) and a peak concurrent users of ~3k, which I think can roughly represent the total market size for this game, as it’s relatively complex and has a niche appeal. About a week after launch, we have ~100 sign-ups, an average 5-10 players per day, and 0 paying subscribers. The [Reddit launch post](https://www.reddit.com/r/StorybookBrawl/comments/1v5vigc/i_really_missed_sbb/) got ~40 upvotes and ~3k views in r/StorybookBrawl; I tried to post the game link in the StorybookBrawl Discord but its current moderators are making their own successor game and seemingly therefore deleted my post ☹️. I put top players’ in-game ratings on the homepage and there seem to be a handful of players that are seemingly gunning for the top spot that resets every month, even though most of the games they’re matched into are against weak AI opponents.
 
@@ -165,7 +165,7 @@ The most interesting part of the community response was the guttural rejection o
   <figcaption>The most revealing question in the community response.</figcaption>
 </figure>
 
-### Most of my users were bots
+<h3 id="most-of-my-users-were-bots">Most of my users were bots <a class="section-permalink" href="#most-of-my-users-were-bots" aria-label="Link to Most of my users were bots">#</a></h3>
 
 Probably the funniest moment was when I realized that all of the analytics dashboards I was so proud of were utterly glazing me. Originally, the game didn’t have any sign-up wall and so was fully available to crawlers/botters and for some reason some bots were playing hundreds of games with my bots. I only noticed after shipping a sign-up wall and the bot script dying. I have no idea why someone would bot a resurrection of a long-defunct tactical auto-battler.
 
