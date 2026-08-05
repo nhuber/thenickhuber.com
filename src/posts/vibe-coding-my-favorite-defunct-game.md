@@ -161,6 +161,10 @@ I would’ve loved for more people to use the game to justify further investment
 
 Update: as I was pushing publish on this post, a former top player streamed the game on Twitch, so who knows maybe this idea still might have some legs.
 
+<figure class="post-figure post-figure-wide">
+  <img src="/assets/fablebrawl-stream-attendance-chart.png" alt="FableBrawl attendance chart showing player activity rising after a former top player starts streaming">
+</figure>
+
 <section class="post-footnotes" aria-labelledby="footnotes-label">
   <h2 id="footnotes-label">Footnotes</h2>
   <ol>
