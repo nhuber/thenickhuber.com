@@ -1,6 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/assets/site.css": "assets/site-footnote-brackets.css" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/site.css": "assets/site-footnote-touch-fix.css" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   eleventyConfig.addFilter("readableDate", (value) => {
