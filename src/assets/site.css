@@ -118,9 +118,6 @@ body.image-lightbox-open { overflow: hidden; }
 .prose .post-comments h2 { margin: 0 0 .8rem; font-size: clamp(1.8rem, 4vw, 2.4rem); }
 .post-comments-action { display: inline-flex; gap: .35rem; align-items: center; margin-top: .4rem; padding: .65rem .9rem; border: 1px solid var(--accent); border-radius: 999px; color: #fff; background: var(--accent); font: 700 .78rem/1 ui-sans-serif, system-ui, sans-serif; text-decoration: none; }
 .post-comments-action:hover { color: #fff; background: var(--ink); border-color: var(--ink); }
-.post-x-feed { overflow: hidden; min-height: 8rem; margin-top: 1.5rem; border: 1px solid var(--line); border-radius: .55rem; background: #fff; }
-.post-x-feed .twitter-timeline { display: block; padding: 1rem; color: var(--accent); font: 700 .85rem/1.4 ui-sans-serif, system-ui, sans-serif; }
-.post-comments-note { margin-top: .65rem; color: var(--muted); font: .72rem/1.5 ui-sans-serif, system-ui, sans-serif; }
 .prose h2[id], .prose h3[id] { scroll-margin-top: 2rem; }
 .section-permalink { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 1em; height: 1em; margin-left: .12em; color: var(--accent); font: 700 .7em/1 ui-sans-serif, system-ui, sans-serif; text-decoration: none; vertical-align: .08em; opacity: .55; touch-action: manipulation; }
 .section-permalink::before { position: absolute; top: 50%; left: 50%; width: 2.75rem; height: 2.75rem; content: ""; transform: translate(-50%, -50%); }

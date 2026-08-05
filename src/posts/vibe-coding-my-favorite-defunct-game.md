@@ -194,15 +194,9 @@ Probably the funniest moment was when I realized that all of the analytics dashb
 <section class="post-comments" aria-labelledby="post-comments-title">
   <p class="post-comments-kicker">Comments</p>
   <h2 id="post-comments-title">Join the conversation</h2>
-  <p>Questions, counterarguments, private benchmarks of your own—I’d love to hear them. Reply on X, or browse the latest conversation below.</p>
+  <p>Questions, counterarguments, private benchmarks of your own—I’d love to hear them. Reply on X.</p>
   <a class="post-comments-action" href="https://x.com/intent/post?text=Thoughts%20on%20Nick%27s%20FableBrawl%20software%20kitchen%3A&amp;url=https%3A%2F%2Fthenickhuber.com%2Fvibe-coding-my-favorite-defunct-game%2F" target="_blank" rel="noopener">Comment on X <span aria-hidden="true">↗</span></a>
-  <div class="post-x-feed">
-    <a class="twitter-timeline" data-height="560" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/nhuber">Posts by @nhuber</a>
-  </div>
-  <p class="post-comments-note">The feed is loaded from X and may require their cookies. If it doesn’t appear, <a href="https://x.com/nhuber">open @nhuber on X</a>.</p>
 </section>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <script>
   (() => {
