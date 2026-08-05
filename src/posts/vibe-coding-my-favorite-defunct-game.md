@@ -159,8 +159,6 @@ The most humbling moment was realizing that ~70% of my daily active users were b
 
 I would’ve loved for more people to use the game to justify further investment, but I probably will just park this project into maintenance mode for the foreseeable future.<sup class="footnote-ref"><a id="fnref-15" href="#fn-15" aria-label="Read footnote 15">15</a></sup> It was a joy to build and learn through 🫡.
 
-<p class="post-closing-question">If you build with coding agents, what’s your private benchmark? If you run a software factory/restaurant, what could I have done differently?</p>
-
 <section class="post-footnotes" aria-labelledby="footnotes-label">
   <h2 id="footnotes-label">Footnotes</h2>
   <ol>
@@ -181,6 +179,8 @@ I would’ve loved for more people to use the game to justify further investment
     <li id="fn-15" tabindex="-1"><a class="footnote-backref" href="#fnref-15" aria-label="Return to footnote 15 in the article" title="Return to footnote 15"><svg class="footnote-return-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M5 12h8a6 6 0 0 1 6 6"/></svg><span aria-hidden="true">15</span></a><p>At this point, the project is 81k lines of code (77k nonblank, 25k of which are tests), but still easy to iterate on, a previous failure mode of past attempts at this benchmark.</p></li>
   </ol>
 </section>
+
+<p class="post-closing-question">If you build with coding agents, what’s your private benchmark? If you run a software factory/restaurant, what could I have done differently?.</p>
 
 <section class="post-comments" aria-labelledby="post-comments-title">
   <p class="post-comments-kicker">Comments</p>
