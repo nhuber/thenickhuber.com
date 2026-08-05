@@ -151,8 +151,8 @@ A few final thoughts for other aspiring software restauranteurs:
 - Codex Fast mode feels meaningfully faster, but consumes quota way too quickly to be worth it – it’s perhaps 50% faster but for what felt like 2.5x quota drawdown
 - This is especially relevant since Codex (unlike Claude) doesn’t give discounts for large usage credit purchases if you ever run over your weekly quota
 - In the first few days, I spent a bunch of time maximizing use of screen real estate on web, mobile web & iOS because it was fun to get that immediate gratification, but in retrospect once you’re trying to maintain consistently across multiple surfaces, it’s important to have colors, padding, spacing, fonts, iconography, etc. canonically defined somewhere.
-- I think the best current way to do this is to have [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) make a design system for you that you approve, but I can’t verify this because I only did this after the fact when I basically had gotten everything looking how I wanted it to.
-- The killer features here are being able to drop a comment *associated with a location* on the screen, just like you’d rev a mockup with a designer, and even draw on the screen to communicate sizings and locations visually
+  - I think the best current way to do this is to have [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) make a design system for you that you approve, but I can’t verify this because I only did this after the fact when I basically had gotten everything looking how I wanted it to.
+  - The killer features here are being able to drop a comment *associated with a location* on the screen, just like you’d rev a mockup with a designer, and even draw on the screen to communicate sizings and locations visually
 
 ## Community response – so, did anyone care?
 
