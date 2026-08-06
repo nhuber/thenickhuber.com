@@ -3,7 +3,7 @@ title: "A tour inside my software restaurant"
 date: 2026-08-03
 legacyCanonical: "https://thenickhuber.com/vibe-coding-my-favorite-defunct-game"
 slug: "vibe-coding-my-favorite-defunct-game"
-socialImage: "/assets/fablebrawl-social-card.png"
+socialImage: "/assets/fablebrawl-social-card.jpg"
 socialImageAlt: "FableBrawl system architecture diagram"
 ---
 
