@@ -3,6 +3,8 @@ title: "A tour inside my software restaurant"
 date: 2026-08-03
 legacyCanonical: "https://thenickhuber.com/vibe-coding-my-favorite-defunct-game"
 slug: "vibe-coding-my-favorite-defunct-game"
+socialImage: "/assets/fablebrawl-social-card.png"
+socialImageAlt: "FableBrawl system architecture diagram"
 ---
 
 <h2 class="post-deck">How I vibe-coded my favorite defunct game in 7 days and most of my “users” ended up being bots.</h2>
