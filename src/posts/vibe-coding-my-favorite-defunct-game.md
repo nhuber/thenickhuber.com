@@ -159,9 +159,7 @@ The most interesting part of the community response was the guttural rejection o
 
 The most humbling moment was realizing that ~70% of my daily active users were bots, perhaps because I hadn’t put any of the site behind a sign-up wall.<sup class="footnote-ref"><a id="fnref-13" href="#fn-13" aria-label="Read footnote 13">13</a></sup> Eventually, the botter’s script died, I added a sign-up wall and some basic bot detection; even though my DAU charts dropped, I was content with the small community I’d brought together around this amazing game. I have no idea why someone would bot a resurrection of a years-defunct tactical auto-battler once purchased by a similarly defunct crypto trading platform, but such are the times.<sup class="footnote-ref"><a id="fnref-14" href="#fn-14" aria-label="Read footnote 14">14</a></sup>
 
-I would’ve loved for more people to use the game to justify further investment, but I probably will just park this project into maintenance mode for the foreseeable future.<sup class="footnote-ref"><a id="fnref-15" href="#fn-15" aria-label="Read footnote 15">15</a></sup> It was a joy to build and learn through 🫡.
-
-Update: as I was pushing publish on this post, a former top player streamed the game on Twitch, so who knows maybe this idea still might have some legs.
+As I was pushing publish on this post, a former top player streamed the game on Twitch—and since then, FableBrawl has grown to 150 sign-ups and around 20 daily active users. It’s still a small community, but enough momentum that I’m actively iterating on the game to see where this goes.<sup class="footnote-ref"><a id="fnref-15" href="#fn-15" aria-label="Read footnote 15">15</a></sup> It continues to be a joy to build and learn through 🫡.
 
 <figure class="post-figure post-figure-wide">
   <img src="/assets/fablebrawl-stream-attendance-chart.png" alt="FableBrawl attendance chart showing player activity rising after a former top player starts streaming">
