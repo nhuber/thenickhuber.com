@@ -31,16 +31,15 @@
     <header class="site-header wrap">
       <a class="wordmark" href="/">Nick Huber</a>
       <nav aria-label="Primary">
-        <a href="/#writing">Writing</a>
+        <a href="/">Writing</a>
         <a href="{{ site.social.x }}">X</a>
         <a href="{{ site.social.github }}">GitHub</a>
       </nav>
     </header>
-    <main{% if bookHomepage %} class="home-main"{% endif %}>{{ content | safe }}</main>
+    <main>{{ content | safe }}</main>
     <footer class="site-footer wrap">
       <p>© {{ "2026-01-01" | year }} Nick Huber. Written here, stored as Markdown.</p>
       <a href="/feed.xml">RSS</a>
     </footer>
-    {% if bookHomepage %}<script src="/assets/home-book.js" defer></script>{% endif %}
   </body>
 </html>
