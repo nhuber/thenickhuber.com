@@ -1,7 +1,8 @@
 import { readFile, readdir, stat } from "node:fs/promises";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = new URL("../", import.meta.url).pathname;
+const root = fileURLToPath(new URL("../", import.meta.url));
 const postsDir = join(root, "src/posts");
 const distDir = join(root, "dist");
 const postFiles = (await readdir(postsDir)).filter((file) => file.endsWith(".md"));

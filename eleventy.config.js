@@ -15,6 +15,7 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addFilter("isoDate", (value) => new Date(value).toISOString());
   eleventyConfig.addFilter("year", (value = new Date()) => new Date(value).getUTCFullYear());
+  eleventyConfig.addFilter("pad2", (value) => String(value).padStart(2, "0"));
 
   return {
     dir: { input: "src", output: "dist", includes: "_includes", data: "_data" },
