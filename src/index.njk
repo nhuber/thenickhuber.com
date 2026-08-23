@@ -3,25 +3,89 @@ layout: base.njk
 title: Nick Huber
 description: AI product leader, self-taught programmer, data scientist, and small-check investor.
 permalink: /index.html
+bookHomepage: true
 ---
-<section class="intro wrap">
-  <div class="intro-copy">
-    <p class="eyebrow">Hello, I’m Nick.</p>
-    <h1>I make AI products, study data, and make small-check investments.</h1>
-    <p class="lede">This is my personal notebook: durable ideas, practical lessons, and the occasional attempt to understand myself.</p>
+<section class="journal-entry" data-book aria-labelledby="journal-title">
+  <div class="journal-heading wrap">
+    <p class="journal-kicker">Field notes on systems, people &amp; small bets</p>
   </div>
-  <figure class="portrait">
-    <img src="/assets/nick-huber.jpg" alt="Nick Huber" width="300" height="300">
-  </figure>
+
+  <div class="book-stage wrap">
+    <button class="book-arrow book-arrow-previous" type="button" data-book-previous aria-label="Previous spread" aria-controls="field-notebook-pages">
+      <svg viewBox="0 0 24 44" aria-hidden="true"><path d="M18 3 6 22l12 19"/></svg>
+    </button>
+
+    <div class="book-volume">
+      <span class="book-edge book-edge-top" aria-hidden="true"></span>
+      <span class="book-edge book-edge-bottom" aria-hidden="true"></span>
+      <div class="book-pages" id="field-notebook-pages" data-book-pages tabindex="0" aria-label="Nick Huber’s field notebook. Use the left and right arrow keys to turn pages.">
+        <section class="book-spread book-spread-cover is-active" data-spread data-spread-label="Cover">
+          <div class="book-page book-page-left book-profile-page">
+            <div class="portrait-note">
+              <span class="portrait-tape" aria-hidden="true"></span>
+              <img src="/assets/nick-huber.jpg" alt="Nick Huber" width="300" height="300">
+              <p>Nick Huber<br><span>Builder · data scientist · investor</span></p>
+            </div>
+            <blockquote>“Often, I don’t know what I really think until I write it down.”</blockquote>
+          </div>
+          <div class="book-page book-page-right book-title-page">
+            <p class="book-overline">The personal notebook of</p>
+            <h1 id="journal-title">Ideas worth keeping.</h1>
+            <p class="book-intro">I make AI products, study data, and make small-check investments. This is where I work through durable ideas, practical lessons, and the occasional attempt to understand myself.</p>
+            <button class="book-open" type="button" data-book-open>
+              Open the notebook
+              <svg viewBox="0 0 30 12" aria-hidden="true"><path d="M1 6h26M22 1l5 5-5 5"/></svg>
+            </button>
+          </div>
+        </section>
+
+        {% set posts = collections.posts | reverse %}
+        {% for post in posts %}
+          {% if loop.index0 % 2 == 0 %}
+        <section class="book-spread" data-spread data-spread-label="Essays {{ loop.index }}–{{ loop.index + 1 }}" hidden>
+          {% endif %}
+          <article class="book-page {% if loop.index0 % 2 == 0 %}book-page-left{% else %}book-page-right{% endif %}">
+            <div class="book-page-meta">
+              <span>{{ home.posts[post.data.slug].topic }}</span>
+              <time datetime="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
+            </div>
+            <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+            <p class="book-page-summary">{{ home.posts[post.data.slug].summary }}</p>
+            <a class="book-read" href="{{ post.url }}">
+              Read essay
+              <svg viewBox="0 0 30 12" aria-hidden="true"><path d="M1 6h26M22 1l5 5-5 5"/></svg>
+            </a>
+          </article>
+          {% if loop.index0 % 2 == 1 or loop.last %}
+        </section>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <button class="book-arrow book-arrow-next" type="button" data-book-next aria-label="Next spread" aria-controls="field-notebook-pages">
+      <svg viewBox="0 0 24 44" aria-hidden="true"><path d="m6 3 12 19L6 41"/></svg>
+    </button>
+  </div>
+
+  <p class="visually-hidden" role="status" aria-live="polite" data-book-label>Cover</p>
 </section>
 
-<section class="writing wrap" aria-labelledby="writing-heading">
-  <h2 id="writing-heading">Writing</h2>
+<section class="writing wrap" id="writing" aria-labelledby="writing-heading">
+  <div class="writing-heading">
+    <div>
+      <p class="section-kicker">Index</p>
+      <h2 id="writing-heading">All writing</h2>
+    </div>
+    <p>Essays on building, data, decisions, and self-knowledge.</p>
+  </div>
   <ol class="post-list">
   {% for post in collections.posts | reverse %}
     <li>
       <a href="{{ post.url }}">
-        <span>{{ post.data.title }}</span>
+        <span class="post-number">{{ loop.index | pad2 }}</span>
+        <span class="post-title">{{ post.data.title }}</span>
+        <span class="post-topic">{{ home.posts[post.data.slug].topic }}</span>
         <time datetime="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
       </a>
     </li>

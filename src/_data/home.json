@@ -1,0 +1,28 @@
+{
+  "posts": {
+    "vibe-coding-my-favorite-defunct-game": {
+      "topic": "Build log",
+      "summary": "Rebuilding a defunct autobattler with coding agents—and discovering that most of the early users were bots."
+    },
+    "quantified-self-a-decade-in-review": {
+      "topic": "Data",
+      "summary": "A decade of personal telemetry, and why AI may finally make the quantified-self idea useful."
+    },
+    "data-analysis-is-a-form-of-software-engineering": {
+      "topic": "Practice",
+      "summary": "Why analytics is a branch of software engineering, told through the mistakes that made the lesson stick."
+    },
+    "asymmetric-opportunities": {
+      "topic": "Decisions",
+      "summary": "Incentives, upside, and a ledger of missed chances—including the very expensive ones."
+    },
+    "working-from-home-2020-2021-a-year-in-review": {
+      "topic": "Work",
+      "summary": "What a year at home changed about focus, family, management, and the shape of a productive day."
+    },
+    "15-ways-i-m-unique": {
+      "topic": "Personal",
+      "summary": "A deliberately unedited inventory of the traits, contradictions, and routines that make me myself."
+    }
+  }
+}
