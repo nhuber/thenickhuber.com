@@ -23,9 +23,15 @@ for (const file of postFiles) {
 }
 
 const homepage = await readFile(join(distDir, "index.html"), "utf8");
+const sitemap = await readFile(join(distDir, "sitemap.xml"), "utf8");
 for (const file of postFiles) {
   const slug = file.replace(/\.md$/, "");
-  if (!homepage.includes(`href="/${slug}/"`)) failures.push(`${slug}: absent from homepage`);
+  const source = await readFile(join(postsDir, file), "utf8");
+  const hiddenFromHomepage = /^hideFromHomepage: true\s*$/m.test(source.split("---")[1]);
+  const linkedFromHomepage = homepage.includes(`href="/${slug}/"`);
+  if (hiddenFromHomepage && linkedFromHomepage) failures.push(`${slug}: should be hidden from homepage`);
+  if (!hiddenFromHomepage && !linkedFromHomepage) failures.push(`${slug}: absent from homepage`);
+  if (!sitemap.includes(`/${slug}/</loc>`)) failures.push(`${slug}: absent from sitemap`);
 }
 
 if (failures.length) {

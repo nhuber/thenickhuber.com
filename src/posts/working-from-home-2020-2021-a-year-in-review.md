@@ -3,6 +3,7 @@ title: "Working from home, 2020-2021: A year in review"
 date: 2021-03-14
 legacyCanonical: "http://thenickhuber.com/working-from-home-2020-2021-a-year-in-review"
 slug: "working-from-home-2020-2021-a-year-in-review"
+hideFromHomepage: true
 ---
 Amidst the dramatic events of the pandemic, I’ve had one constant source of unexpected joy: the productivity, personal growth, and freedom I’ve discovered from working from home.<sup>1</sup> I wanted to write up my experience to put all my thoughts on it in one place.
 
