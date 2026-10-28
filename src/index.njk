@@ -39,7 +39,7 @@ bookHomepage: true
           </div>
         </section>
 
-        {% set posts = collections.posts | reverse %}
+        {% set posts = collections.homepagePosts | reverse %}
         {% for post in posts %}
           {% if loop.index0 % 2 == 0 %}
         <section class="book-spread" data-spread data-spread-label="Essays {{ loop.index }}–{{ loop.index + 1 }}" hidden>
@@ -80,7 +80,7 @@ bookHomepage: true
     <p>Essays on building, data, decisions, and self-knowledge.</p>
   </div>
   <ol class="post-list">
-  {% for post in collections.posts | reverse %}
+  {% for post in collections.homepagePosts | reverse %}
     <li>
       <a href="{{ post.url }}">
         <span class="post-number">{{ loop.index | pad2 }}</span>

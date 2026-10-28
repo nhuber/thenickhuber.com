@@ -4,6 +4,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/site.css": "assets/site-footnote-touch-fix.css" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
+  eleventyConfig.addCollection("homepagePosts", (collectionApi) =>
+    collectionApi.getFilteredByTag("posts").filter((post) => !post.data.hideFromHomepage)
+  );
+
   eleventyConfig.addFilter("readableDate", (value) => {
     const parsed = value instanceof Date ? value : new Date(`${value}T12:00:00Z`);
     return new Intl.DateTimeFormat("en-US", {

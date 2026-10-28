@@ -3,6 +3,7 @@ title: "15 Ways I’m Unique"
 date: 2021-03-13
 legacyCanonical: "http://thenickhuber.com/15-ways-i-m-unique"
 slug: "15-ways-i-m-unique"
+hideFromHomepage: true
 ---
 I recently read Y Combinator co-founder Jessica Livingston’s post on how to [Grow The Puzzle Around You](https://foundersatwork.posthaven.com/grow-the-puzzle-around-you). It describes in beautiful detail her unique, often behind-the-scenes contributions to the enormously successful startup generator, and her journey to becoming a non-traditional technology investor.
 
